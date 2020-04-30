@@ -247,6 +247,10 @@ func (c *Cast) genReply(request *Request) (*Response, error) {
 	return resp, nil
 }
 
-func (c *Cast) BaseURL() string {
+func (c *Cast) GetBaseURL() string {
 	return c.baseURL
+}
+
+func (c *Cast) GetHeader() http.Header {
+	return c.header
 }

@@ -250,7 +250,27 @@ func (r *Request) RawRequest() *http.Request {
 	return r.rawRequest
 }
 
-func (r *Request) Body() []byte {
+func (r *Request) GetBody() []byte {
 	data, _ := r.body.Body()
 	return data
+}
+
+func (r *Request) GetHeader() http.Header {
+	return r.header
+}
+
+func (r *Request) GetPath() string {
+	return r.path
+}
+
+func (r *Request) GetMethod() string {
+	return r.method
+}
+
+func (r *Request) GetQueryParam() interface{} {
+	return r.queryParam
+}
+
+func (r *Request) GetPathParam() map[string]interface{} {
+	return r.pathParam
 }
