@@ -249,3 +249,8 @@ func (r *Request) WithCircuit(name string) *Request {
 func (r *Request) RawRequest() *http.Request {
 	return r.rawRequest
 }
+
+func (r *Request) Body() []byte {
+	data, _ := r.body.Body()
+	return data
+}

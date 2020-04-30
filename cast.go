@@ -246,3 +246,7 @@ func (c *Cast) genReply(request *Request) (*Response, error) {
 
 	return resp, nil
 }
+
+func (c *Cast) BaseURL() string {
+	return c.baseURL
+}
